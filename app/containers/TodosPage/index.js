@@ -1,7 +1,7 @@
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import Todos from './Todos';
-// import * as CounterActions from '../actions/counter';
+import * as TodoActions from '../../actions/todos';
 
 function mapStateToProps(state) {
   return {
@@ -10,7 +10,7 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({}, dispatch);
+  return bindActionCreators(TodoActions, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Todos);

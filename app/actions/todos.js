@@ -8,21 +8,16 @@
 export const ADD_TODO = 'ADD_TODO';
 export const REMOVE_TODO = 'REMOVE_TODO';
 
-export function increment(todo) {
+export function addTodo(todo: string) {
   return {
     type: ADD_TODO,
     payload: todo,
   };
 }
 
-// export function incrementIfOdd() {
-//   return (dispatch: (action: actionType) => void, getState: () => todosStateType) => {
-//     const { todos } = getState();
-
-//     if (counter % 2 === 0) {
-//       return;
-//     }
-
-//     dispatch(increment());
-//   };
-// }
+export function deleteTodoAttempt(todoId: number) {
+  return {
+    type: REMOVE_TODO,
+    payload: todoId,
+  };
+}
